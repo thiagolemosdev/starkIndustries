@@ -5,10 +5,17 @@
 }
 
 body {
-  /* background-color: var(--c3); */
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(
+    circle,
+    rgba(246, 246, 246, 1) 0%,
+    rgba(154, 20, 20, 1) 100%
+  );
 }
 
 main {
+  background: white;
   max-width: 1280px;
   gap: 48px;
   margin: 0 auto;
@@ -18,7 +25,6 @@ main {
 }
 
 section.banner img {
-  /* object-fit: cover; */
   max-width: 100%;
   height: 100%;
 }
@@ -53,6 +59,7 @@ section.form label {
 
 section.form input {
   background-color: var(--c3);
+  display: inline;
   width: 70%;
   height: 48px;
   border: none;
@@ -109,7 +116,7 @@ section.form > p a {
 
 @media (max-width: 900px) {
   section.banner img {
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 
@@ -120,8 +127,31 @@ section.form > p a {
   }
 
   section.form {
+    width: 90%;
     margin: 0 auto;
   }
+
+  section.form form input {
+    position: relative;
+  }
+
+  section.form form input {
+    background-image: url("../img/email.svg") no-repeat top right;
+  }
+
+  /* section.form form input::before {
+    content: "";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background: url("../img/email.svg");
+  } */
 
   section.form label,
   section.form button,
@@ -129,15 +159,21 @@ section.form > p a {
   section.form input {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
   }
 
   section.form > p {
     margin-bottom: 20px;
   }
 
-  /* section.form h2,
+  section.form h2,
   section.form label {
     display: none;
-  } */
+  }
+}
+
+@media (max-width: 450px) {
+  section.banner img {
+    max-height: 500px;
+  }
 }
