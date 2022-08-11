@@ -23,7 +23,7 @@ main {
 
 section.banner img {
   object-fit: cover;
-  max-width: 99%;
+  max-width: 100%;
   height: 99.78%;
 }
 
