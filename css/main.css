@@ -17,7 +17,8 @@ body {
 
 main {
   background: white;
-  max-width: 1280px;
+  max-width: 100%px;
+  height: 100%;
   gap: 48px;
   margin: 0 auto;
   display: grid;
@@ -26,19 +27,22 @@ main {
 }
 
 section.banner img {
+  object-fit: cover;
   max-width: 100%;
   height: 100%;
 }
 
 section.form {
+  margin: 0 auto;
   max-height: 100%;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 section.form h2 {
+  width: 100%;
   font-weight: 700;
   color: var(--c1);
   font-size: 2.25em;
@@ -65,7 +69,7 @@ section.form label {
 section.form input {
   background-color: var(--c3);
   display: inline;
-  width: 70%;
+  width: 50%;
   height: 48px;
   border: none;
   margin-bottom: 24px;
@@ -85,7 +89,7 @@ section.form input.check + label {
 }
 
 section.form > div {
-  width: 70%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }
