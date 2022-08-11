@@ -7,11 +7,12 @@
 body {
   height: 100vh;
   width: 100vw;
-  background: radial-gradient(
+  box-sizing: border-box !important;
+  /* background: radial-gradient(
     circle,
     rgba(246, 246, 246, 1) 0%,
     rgba(154, 20, 20, 1) 100%
-  );
+  ); */
 }
 
 main {
@@ -48,6 +49,10 @@ section.form h2 {
 section.form label,
 section.form input {
   display: block;
+}
+
+section.form img {
+  display: none;
 }
 
 section.form label {
@@ -127,31 +132,75 @@ section.form > p a {
   }
 
   section.form {
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  section.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  section.form h2,
+  section.form label,
+  section.form > p {
+    display: none;
+  }
+
+  section.form form input.email {
+    /* width: 80%; */
+    background-image: url(../img/email.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    padding-left: 4em;
+  }
+
+  section.form form input.senha {
+    background-image: url(../img/senha.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    padding-left: 4em;
+  }
+
+  section.form button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  section.banner img {
+    max-height: 500px;
+  }
+}
+
+/* section.form {
     width: 90%;
     margin: 0 auto;
   }
 
-  section.form form input {
-    position: relative;
+  section.form form input.email {
+    width: 100%;
+    background-image: url(../img/email.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    padding-left: 4em;
   }
 
-  section.form form input {
-    background-image: url("../img/email.svg") no-repeat top right;
+  section.form form input.senha {
+    width: 80%;
+
+    background-image: url(../img/senha.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    padding-left: 4em;
   }
 
-  /* section.form form input::before {
-    content: "";
-    z-index: 10;
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    width: 50px;
-    background: url("../img/email.svg");
-  } */
+  section.form img {
+    display: inherit;
+  }
 
   section.form label,
   section.form button,
@@ -159,7 +208,6 @@ section.form > p a {
   section.form input {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
   }
 
   section.form > p {
@@ -176,4 +224,4 @@ section.form > p a {
   section.banner img {
     max-height: 500px;
   }
-}
+} */
