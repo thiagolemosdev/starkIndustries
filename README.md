@@ -1,7 +1,7 @@
 # StarkIndustries
 
 <p align="center">
-  <img alt="Portifolio" src=".github/desktop.png">
+  <img alt="Starkindustries" src=".github/desktop.png">
   <!-- <img alt="Calculadora" src=".github/mobile.png"> -->
 </p>
 
